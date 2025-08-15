@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+---
+<BaseLayout title="Generic - Editorial by HTML5 UP">
+  <Fragment slot="header">
+    <Header />
+  </Fragment>
+
+  <section>
+    <header class="main">
+      <h1>Generic</h1>
+    </header>
+    <span class="image main"><img src="/images/pic11.jpg" alt="" /></span>
+    <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
+    <hr class="major" />
+    <h2>Interdum sed dapibus</h2>
+    <p>Duis dapibus rutrum facilisis. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra.</p>
+    <hr class="major" />
+    <h2>Magna etiam veroeros</h2>
+    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
+    <hr class="major" />
+    <h2>Lorem aliquam bibendum</h2>
+    <p>Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor.</p>
+  </section>
+
+  <Fragment slot="sidebar">
+    <Sidebar />
+  </Fragment>
+</BaseLayout>

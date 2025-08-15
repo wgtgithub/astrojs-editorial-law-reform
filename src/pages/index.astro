@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Banner from "../components/Banner.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+import PostCard from "../components/PostCard.astro";
+
+const features = [
+  { icon: "fa-gem", title: "Portitor ullamcorper", text: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore."},
+  { icon: "solid fa-paper-plane", title: "Sapien veroeros", text: "Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus."},
+  { icon: "solid fa-rocket", title: "Quam lorem ipsum", text: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore."},
+  { icon: "solid fa-signal", title: "Sed magna finibus", text: "Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus."}
+];
+
+const posts = [
+  { image: "/images/pic01.jpg", title: "Interdum aenean", text: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore." },
+  { image: "/images/pic02.jpg", title: "Nulla amet dolore", text: "Proin aliquam facilisis ante interdum. Sed nulla amet lorem." },
+  { image: "/images/pic03.jpg", title: "Tempus ullamcorper", text: "Sed nulla amet lorem feugiat tempus aliquam." },
+  { image: "/images/pic04.jpg", title: "Sed etiam facilis", text: "Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore." },
+  { image: "/images/pic05.jpg", title: "Feugiat lorem aenean", text: "Proin aliquam facilisis ante interdum. Sed nulla amet lorem." },
+  { image: "/images/pic06.jpg", title: "Amet varius aliquam", text: "Sed nulla amet lorem feugiat tempus aliquam." }
+];
+---
+
+<BaseLayout title="Editorial by HTML5 UP">
+  <Fragment slot="header">
+    <Header />
+  </Fragment>
+
+  <Banner />
+
+  <section>
+    <header class="major">
+      <h2>Erat lacinia</h2>
+    </header>
+    <div class="features">
+      {features.map((f) => <FeatureCard icon={f.icon} title={f.title} text={f.text} />)}
+    </div>
+  </section>
+
+  <section>
+    <header class="major">
+      <h2>Ipsum sed dolor</h2>
+    </header>
+    <div class="posts">
+      {posts.map((p) => <PostCard image={p.image} title={p.title} text={p.text} />)}
+    </div>
+  </section>
+
+  <Fragment slot="sidebar">
+    <Sidebar />
+  </Fragment>
+</BaseLayout>
